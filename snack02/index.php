@@ -10,25 +10,12 @@
 
 
 
-$mail = 'amin@yaho.com';
-$age = 22;
 
 
 ?>
 
 
 <form action="./server.php" method="GET">
-
-<?php
-
-$name = 'pippo';
-if (strlen(string $name) < 3) {
-  echo "Have a good day!";
-}
-else{
-    echo "see you";
-}
-?>
 
 
 </form>

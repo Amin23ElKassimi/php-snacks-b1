@@ -8,54 +8,41 @@
 
 // Olimpia Milano - Cantù | 55-60
 
-
-
-
-
-$array = [
-
-    "partita01" => [
-        "Roma" => 10,
-        "Milano" => 4,
+$matches = [
+    [
+        'team1' => 'Acqua S.Bernardo Cantù',
+        'team2' => 'Oriora Pistoia',
+        'point_team_1' => 70,
+        'point_team_2' => 45
     ],
-    "partita02" => [
-        "Napoli" => 5,
-        "Madrid" => 2,
+    [
+        'team1' => 'Fortitudo Pompea Bologna',
+        'team2' => 'Dolomiti Energia Trentino',
+        'point_team_1' => 82,
+        'point_team_2' => 83
     ],
-    "partita03" => [
-        "Londra" => 20,
-        "Parigi" => 12,
+    [
+        'team1' => 'Pallacanestro Trieste',
+        'team2' => 'Virtus Roma',
+        'point_team_1' => 72,
+        'point_team_2' => 33
     ],
-    "partita04" => [
-        "Casablanca" => 33,
-        "Marrakech" => 20,
-    ],
-    "partita05" => [
-        "Bologna" => 22,
-        "Bergamo" => 43,
+    [
+        'team1' => 'Openjobmetis Varese',
+        'team2' => 'Germani Basket Brescia',
+        'point_team_1' => 101,
+        'point_team_2' => 99
     ],
 ];
 
-
-
 ?>
 
-
-<div>
-
 <ul>
-<?php 
-        foreach ($array as $x)?>
-<li>
-<?php echo "$x <br>";?>
-</li>
-
+    <?php foreach ( $matches as $match ) { ?>
+        <li>
+            <pre>
+                <?php echo  $match['team1'] . ' - ' . $match['team2']. ': ' . $match['point_team_1'] . ' - ' . $match['point_team_2']; ?>; ?>
+            </pre>
+        </li>
+    <?php } ?>
 </ul>
-
-  
-
-
-
-
-
-</div>
