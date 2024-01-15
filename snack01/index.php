@@ -34,8 +34,7 @@ $array = [
         "Bologna" => 22,
         "Bergamo" => 43,
     ],
-]
-
+];
 
 
 
@@ -45,10 +44,18 @@ $array = [
 <div>
 
 <ul>
-
+<?php 
+        foreach ($array as $x)?>
+<li>
+<?php echo "$x <br>";?>
+</li>
 
 </ul>
 
-<?php var_dump($array) ?>
+  
+
+
+
+
 
 </div>
