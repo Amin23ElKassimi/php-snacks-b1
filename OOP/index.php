@@ -44,3 +44,9 @@ class Pokemon {
 // Creare un'istanza di Pokemon
 $pokemon1 = new Pokemon("Pikachu", "Elettrico", 5, 50, 8);
 
+// Utilizzare i metodi della classe
+echo "Nome: " . $pokemon1->getNome() . "<br>";
+echo "Tipo: " . $pokemon1->getTipo() . "<br>";
+echo "Punti Salute: " . $pokemon1->getPuntiSalute() . "<br>";
+
+
