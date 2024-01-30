@@ -3,17 +3,15 @@
 
 
  <?php
-class Product{
+class Persona{
     public $name;
     public $lastname;
     public $age;
-    public $imageUrl;
 
-    public function __construct(string $_name, string $_lastname, float $_age, string $_imageUrl ){
+    public function __construct(string $_name, string $_lastname, int $_age){
         $this->name = $_name;
         $this->lastname = $_lastname;
         $this->age = $_age;
-        $this->imageUrl = $_imageUrl;
     }
 
     public function setAge($age) {
@@ -23,7 +21,38 @@ class Product{
 
         $this->age = $age;
     }
+    
+
+    
+    public function getAge() {
+        return $this->age;
+    }
+
+    public function getName() {
+        return $this->name;
+    }
+
 }
+
+
+// Utilizzo della classe Persona
+try {
+    // Creare un'istanza della classe Persona
+    $persona = new Persona('Mario','Bianchi', 30);
+
+    // Impostare l'età con un numero intero
+    $persona->setAge('AJD');
+
+    // Tentare di impostare l'età con una stringa (genererà un'eccezione)
+    // $persona->setAge('non un numero');
+
+    // Stampare informazioni sulla persona
+    echo 'Nome: ' . $persona->getName() . '<br>';
+    echo 'Età: ' . $persona->getAge() . '<br>';
+} catch (InvalidArgumentException $e) {
+    echo 'Errore: ' . $e->getMessage();
+}
+
 
 
 
