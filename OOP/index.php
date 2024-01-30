@@ -49,4 +49,7 @@ echo "Nome: " . $pokemon1->getNome() . "<br>";
 echo "Tipo: " . $pokemon1->getTipo() . "<br>";
 echo "Punti Salute: " . $pokemon1->getPuntiSalute() . "<br>";
 
+?>
+
+
 
