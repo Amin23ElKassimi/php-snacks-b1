@@ -1,6 +1,13 @@
-<!-- Creare un nuovo oggetto Persona con un metodo setAge() che cambia il valore della proprieta' age della classe Persona, che accetti esclusivamente un numero intero.
- Se il numero inserito come argomento non dovesse essere un numero intero: allora lanciare un'eccezione! -->
+<!-- Parte 1:
+Creare un nuovo oggetto Persona con un metodo setAge() che cambia il valore della proprieta' age della classe Persona,
+che accetti esclusivamente un numero intero.
+Se il numero inserito come argomento non dovesse essere un numero intero: allora lanciare un'eccezione! -->
 
+
+<!-- Parte 2:
+Includendo con try e catch una chiamata a setAge con una stringa come argomento,
+catturare l'eccezione e invece di emettere un errore bloccante,
+scrivere in pagina il messaggio di errore -->
 
  <?php
 class Persona{
@@ -14,20 +21,19 @@ class Persona{
         $this->age = $_age;
     }
 
+    // Funzione setAge() 
     public function setAge($age) {
         if (!is_int($age)) {
             throw new InvalidArgumentException('L\'età deve essere un numero intero.');
         }
-
         $this->age = $age;
     }
     
-
-    
+    // Ottieni eta
     public function getAge() {
         return $this->age;
     }
-
+    // Ottieni Nome
     public function getName() {
         return $this->name;
     }
@@ -35,21 +41,23 @@ class Persona{
 }
 
 
+
+// Creare un'istanza della classe Persona
+$persona = new Persona('Mario','Bianchi', 30);
+
 // Utilizzo della classe Persona
 try {
-    // Creare un'istanza della classe Persona
-    $persona = new Persona('Mario','Bianchi', 30);
 
-    // Impostare l'età con un numero intero
-    $persona->setAge('AJD');
+    // v Qui v provo ad Impostare l'età con un numero intero
+    $persona->setAge('23ds');
 
     // Tentare di impostare l'età con una stringa (genererà un'eccezione)
     // $persona->setAge('non un numero');
 
-    // Stampare informazioni sulla persona
+    // Stampo informazioni sulla persona
     echo 'Nome: ' . $persona->getName() . '<br>';
     echo 'Età: ' . $persona->getAge() . '<br>';
-} catch (InvalidArgumentException $e) {
+} catch (Exception $e) {
     echo 'Errore: ' . $e->getMessage();
 }
 
