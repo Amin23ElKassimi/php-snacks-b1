@@ -16,12 +16,12 @@ class Product{
         $this->imageUrl = $_imageUrl;
     }
 
-    public function getProductInfo(): string{
-        return $this->name . ', ' . $this->lastname . ', ' . $this->imageUrl;
-    }
+    public function setAge($age) {
+        if (!is_int($age)) {
+            throw new InvalidArgumentException('L\'età deve essere un numero intero.');
+        }
 
-    public function setAge(){
-        return false;
+        $this->age = $age;
     }
 }
 
