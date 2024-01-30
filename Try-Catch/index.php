@@ -45,21 +45,23 @@ class Persona{
 // Creare un'istanza della classe Persona
 $persona = new Persona('Mario','Bianchi', 30);
 
+
 // Utilizzo della classe Persona
 try {
-
     // v Qui v provo ad Impostare l'età con un numero intero
-    $persona->setAge('23ds');
-
+    $persona->setAge('wqww');
     // Tentare di impostare l'età con una stringa (genererà un'eccezione)
     // $persona->setAge('non un numero');
-
+    
     // Stampo informazioni sulla persona
     echo 'Nome: ' . $persona->getName() . '<br>';
     echo 'Età: ' . $persona->getAge() . '<br>';
+
+
 } catch (Exception $e) {
     echo 'Errore: ' . $e->getMessage();
 }
+
 
 
 
